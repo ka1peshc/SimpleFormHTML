@@ -21,6 +21,17 @@ email.addEventListener('input',function(){
     }
 });
 
+//UC 3 phone validation
+const phone = document.querySelector('#tel');
+const errPhone = document.querySelector('.phone-error');
+phone.addEventListener('input',function(){
+    let phoneRegex = RegExp('^[1-9]{2}\\s[0-9]{10}$');
+    if(phoneRegex.test(phone.value)){
+        errPhone.textContent="";
+    }else{
+        errPhone.textContent="Phone number is incorrect";
+    }
+});
 
 const salary = document.querySelector('#salary');
 const output = document.querySelector('.salary-output');
